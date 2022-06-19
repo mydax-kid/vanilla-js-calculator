@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    padding: 50px;
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C)
+  }
+  
+  .calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px); /*4rows 100px each*/
+    grid-template-rows:minmax(120px, auto) repeat(5, 100px); /* first row(120px min-height, max-width auto(can grow as much as it needs to fit the content)); plus five more rows 100px in height*/
+    
+  }
+  
+  .calculator button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background: rgba(225, 225, 225, .75)
+  }
+  
+  .calculator button:hover{
+    background:rgba(225,225,225, 1)
+  }
+  
+  .spans2{
+    grid-column: span 2;
+  }
+  
+  .output{
+    grid-column: 1/span 4;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .output .compute{
+    font-size: 1.5em;
+    color: white;
+  }
+  
+  .output .print{
+    font-size: 2em;
+    color: white;
+  }
+
+  .previous-operand, .current-operand{
+    height: 50%;
+    width: 100%;
+    color: white;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 16px;
+    font-size: 35px;
+  }
+
+  .previous-operand{
+    font-size: 20px;
+    color: rgba(225, 225, 225, .75);
+  }
